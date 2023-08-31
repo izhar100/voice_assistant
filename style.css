@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,700;1,100;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 70%, rgba(34, 193, 195, 1) 100%);
+  height: 100vh;
+}
+
+.machine {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(0, 255, 225);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.machine>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.machine>div:nth-child(3) {
+  margin-right: 20px;
+}
+
+.machine>div>img {
+  width: 50px;
+}
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+.calendar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.temp {
+  display: flex;
+  align-items: center;
+}
+
+.calAndTemp {
+  display: flex;
+  justify-content: space-between;
+}
+
+#weatherIcon {
+  width: 50px;
+}
+
+.robot {
+  display: flex;
+  justify-content: center;
+}
+.robot>img {
+  width: 300px;
+}
+
+.startAndStop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#start_jarvis_btn {
+  border: none;
+  background-color: white;
+}
+
+#start_jarvis_btn>img {
+  width: 80px;
+}
+
+#start_jarvis_btn:hover {
+  cursor: pointer;
+}
+
+#stop_jarvis_btn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  margin: auto;
+  border: none;
+  color: white;
+  background-color: rgb(0, 132, 255);
+  border-radius: 10px;
+}
+
+#stop_jarvis_btn>p {
+  text-align: center;
+  color: white;
+}
+
+#stop_jarvis_btn:hover {
+  cursor: pointer;
+}
+.jarvis_setup{
+  display: none;
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  right: 20%;
+  left: 20%;
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 2000;
+  background-color: rgba(35, 0, 138, 0.671);
+  box-shadow: rgba(0, 0, 0, 0.737) 0px 22px 70px 4px;
+}
+.jarvis_setup>h2{
+  color: rgb(255, 255, 255);
+}
+.jarvis_setup>label{
+   color: white;
+}
+.jarvis_setup>input{
+  color: rgb(255, 255, 255);
+  background-color: rgba(27, 0, 126, 0.451);
+  padding: 5px;
+  width: 80%;
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+}
+.jarvis_setup>button{
+  width: 20%;
+  padding: 7px 10px 7px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 0, 208);
+  color: white;
+  font-weight: 600;
+}
+.jarvis_setup>button:hover{
+  cursor: pointer;
+}
+
+.commands{
+  display: none;
+  position: absolute;
+  color: white;
+  top: 10%;
+  text-align: center;
+  right: 20%;
+  left: 20%;
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 2;
+  background-color: rgba(6, 0, 63, 0.817);
+  box-shadow: rgba(0, 0, 0, 0.737) 0px 22px 70px 4px;
+  height: 80vh;
+  overflow-y: scroll
+}
+.commands::-webkit-scrollbar {
+  display: block;
+}
+.commands::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.commands::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.commands>p{
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .machine {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    font-size: small;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(0, 255, 225);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  
+  .machine>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .machine>div>img {
+    width: 30px;
+  }
+  .container{
+    width: 95%;
+    margin: auto;
+  }
+  
+  .calendar {
+    display: flex;
+    align-items: center;
+    font-size: small;
+    gap: 5px;
+  }
+  
+  .temp {
+    display: flex;
+    align-items: center;
+    font-size: small;
+  }
+  
+  .calAndTemp {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+  }
+  
+  #weatherIcon {
+    width: 50px;
+  }
+  
+  .robot {
+    display: flex;
+    justify-content: center;
+  }
+  .robot>img {
+    width: 300px;
+  }
+  
+  .startAndStop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #start_jarvis_btn {
+    border: none;
+    background-color: white;
+  }
+  
+  #start_jarvis_btn>img {
+    width: 80px;
+  }
+  
+  #start_jarvis_btn:hover {
+    cursor: pointer;
+  }
+  
+  #stop_jarvis_btn {
+    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    margin: auto;
+    border: none;
+    color: white;
+    background-color: rgb(0, 132, 255);
+    border-radius: 10px;
+  }
+  
+  #stop_jarvis_btn>p {
+    text-align: center;
+    color: white;
+  }
+  
+  #stop_jarvis_btn:hover {
+    cursor: pointer;
+  }
+  .jarvis_setup{
+    display: none;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 80%;
+    left: 5%;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 2000;
+    background-color: rgba(35, 0, 138, 0.671);
+    box-shadow: rgba(0, 0, 0, 0.737) 0px 22px 70px 4px;
+  }
+  .jarvis_setup>h2{
+    color: rgb(255, 255, 255);
+  }
+  .jarvis_setup>label{
+     color: white;
+  }
+  .jarvis_setup>input{
+    color: rgb(255, 255, 255);
+    background-color: rgba(27, 0, 126, 0.451);
+    padding: 5px;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 5px;
+  }
+  .jarvis_setup>button{
+    width: 40%;
+    padding: 7px 10px 7px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 0, 208);
+    color: white;
+    font-weight: 600;
+  }
+  .jarvis_setup>button:hover{
+    cursor: pointer;
+  }
+  
+  .commands{
+    display: none;
+    position: absolute;
+    color: white;
+    top: 10%;
+    width: 80%;
+    left: 5%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 2;
+    background-color: rgba(6, 0, 63, 0.817);
+    box-shadow: rgba(0, 0, 0, 0.737) 0px 22px 70px 4px;
+    height: 80vh;
+    overflow-y: scroll
+  }
+  .commands::-webkit-scrollbar {
+    display: block;
+  }
+  .commands::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  .commands::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  
+  .commands>p{
+    color: white;
+  }
+}

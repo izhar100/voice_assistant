@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hi I am FRIDAy" />
+  <title>QuickAI-created by Izhar</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/011/029/469/original/cute-robot-in-hand-drawn-illustration-design-png.png">
+</head>
+
+<body>
+  <audio src="./Jarvis.mp3" id="j_intro"></audio>
+  <audio src="./power up.mp3" id="turn_on"></audio>
+
+  <div class="machine hide_on_small">
+    <div class="clock cont">
+      <img src="./clock1.png" class="icon" />
+      <p id="time"></p>
+    </div>
+    <div class="battery cont">
+      <img src="./battery1.png" class="icon" />
+      <p id="battery"></p>
+    </div>
+    <div class="internet cont">
+      <p>🟢</p>
+      <p id="internet"></p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <!-- calendar -->
+  <div class="container">
+    <div class="calAndTemp">
+      <div class="calendar">
+        <p id="day"></p>,
+        <p id="date"></p>
+        <p id="month"></p>
+        <p id="year"></p>
+      </div>
+      <!-- <img src="./heart.gif" id="heart" /> -->
+      <!-- <img src="./iron_man.gif" id="iron_man" /> -->
+      <div class="temp">
+        <p id="location"></p>
+        <p id="country"></p>
+        <!-- <p id="weatherT"></p>
+        <p id="weatherD"></p> -->
+        <img src="" id="weatherIcon" />
+        <p id="oTemp"></p>
+        <!-- <p id="feelLikeTemp"></p>
+        <p id="minT"></p>
+        <p id="maxT"></p> -->
+      </div>
+    </div>
+    <div class="robot">
+      <img src="./robot.gif" alt="">
+    </div>
+    <br>
+    <h1 style="text-align: center;">Ask me something...!</h1>
+    <br>
+    <div class="startAndStop">
+      <button id="start_jarvis_btn" class="hide_on_small">
+        <img id="voiceimg" src="./voicestart.png" alt="start jarvis" />
+      </button>
+    
+      <button id="stop_jarvis_btn" class="hide_on_small">
+        <p>STOP</p>
+      </button>
+    </div>
+  
+      <div class="jarvis_setup in_middle hide_on_small">
+        <h2>Please tell me about yourself</h2>
+        <br>
+        <label for="">Your Name</label>
+        <br>
+        <input type="text" placeholder="Enter your name here..." />
+        <br />
+        <br>
+        <label for="">Your Bio</label>
+        <br>
+        <input type="text" placeholder="Enter your bio here..." />
+        <br />
+        <br>
+        <label for="">Your Location</label>
+        <br>
+        <input type="text" placeholder="Enter your location here..." />
+        <br />
+        <br>
+        <button id="sub_btn">Submit</button>
+      </div>
+  
+  
+    <!-- <div class="messages hide_on_small"></div> -->
+  
+    <div class="commands in_middle hide_on_small"></div>
+  </div>
+  <br>
+  <br>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
