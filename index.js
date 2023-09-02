@@ -436,7 +436,7 @@ recognition.onresult = function (event) {
     let videoName = playStr.join("");
     playStr = playStr.join("").split(" ").join("+");
     readOut(`searching youtube for ${videoName}`);
-    let a = window.open(`https://m.youtube.com/search?q=${playStr}`
+    let a = window.open(`https://www.youtube.com/results?app=mobile&q=${playStr}`
     );
     windowsB.push(a)
   }
