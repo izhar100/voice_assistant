@@ -11,7 +11,7 @@
 body {
   background: rgb(255, 255, 255);
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 70%, rgba(34, 193, 195, 1) 100%);
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 .machine {
@@ -68,6 +68,9 @@ body {
 }
 .robot>img {
   width: 300px;
+}
+#askme{
+  text-align: center;
 }
 
 .startAndStop {
@@ -238,7 +241,12 @@ body {
     justify-content: center;
   }
   .robot>img {
-    width: 300px;
+    width: 200px;
+  }
+
+  #askme{
+    text-align: center;
+    font-size: medium;
   }
   
   .startAndStop {
