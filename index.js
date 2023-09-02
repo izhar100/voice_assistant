@@ -277,7 +277,11 @@ recognition.onresult = function (event) {
   if (transcript.includes("what's the charging status")) {
     readOut(`the current charging status is ${chargeStatus}`);
   }
-  if (transcript.includes("current time")) {
+  if (
+    transcript.includes("current time")||
+    transcript.includes("what's the time")||
+    transcript.includes("time")
+  ) {
     readOut(currentTime);
   }
   if (transcript.includes("connection status")) {
@@ -327,7 +331,9 @@ recognition.onresult = function (event) {
 
   // weather report
   if (
-    transcript.includes("what's the temperature")
+    transcript.includes("what's the temperature")||
+    transcript.includes("temperature")||
+    transcript.includes("weather report")
   ) {
     readOut(weatherStatement);
   }
@@ -356,7 +362,7 @@ recognition.onresult = function (event) {
   // whatsapp
   if (transcript.includes("open whatsapp")) {
     readOut("opening whatsapp");
-    let a = window.open("https://web.whatsapp.com/");
+    let a = window.open("https://api.whatsapp.com/");
     windowsB.push(a)
   }
   // netlify
@@ -368,7 +374,7 @@ recognition.onresult = function (event) {
   // spotify
   if (transcript.includes("open facebook")||transcript.includes("facebook")) {
     readOut("opening facebook");
-    let a = window.open("https://www.facebook.com/");
+    let a = window.open("https://m.facebook.com/");
     windowsB.push(a)
   }
 
@@ -413,14 +419,14 @@ recognition.onresult = function (event) {
   }
   if (transcript.includes("open linkedin")) {
     readOut("opening linkedin");
-    let a = window.open("https://www.linkedin.com/");
+    let a = window.open("https://in.linkedin.com/");
     windowsB.push(a)
   }
 
   // youtube
   if (transcript.includes("open youtube")) {
     readOut("opening youtube");
-    let a = window.open("https://www.youtube.com/");
+    let a = window.open("https://m.youtube.com/");
     windowsB.push(a)
   }
 
@@ -430,7 +436,7 @@ recognition.onresult = function (event) {
     let videoName = playStr.join("");
     playStr = playStr.join("").split(" ").join("+");
     readOut(`searching youtube for ${videoName}`);
-    let a = window.open(`https://www.youtube.com/search?q=${playStr}`
+    let a = window.open(`https://m.youtube.com/search?q=${playStr}`
     );
     windowsB.push(a)
   }
@@ -445,7 +451,7 @@ recognition.onresult = function (event) {
   // twitter
   if (transcript.includes("open twitter")) {
     readOut("opening twitter");
-    let a = window.open(`https://twitter.com/`);
+    let a = window.open(`https://twitter.com/login`);
     windowsB.push(a)
   }
 
