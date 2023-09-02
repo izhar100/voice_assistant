@@ -282,7 +282,7 @@ recognition.onresult = function (event) {
     transcript.includes("what's the time")||
     transcript.includes("time")
   ) {
-    readOut(currentTime);
+    readOut(`it is ${currentTime}`);
   }
   if (transcript.includes("connection status")) {
     readOut(`you are ${connectivity} `);
